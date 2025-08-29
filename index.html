@@ -58,7 +58,7 @@
 <body>
   <h3>Refleksi 6</h3>
   <p>
-    Menguraikan dokumentasi akhir. Ukurlah kemampuan pemahaman terhadap penyajian materi pengetahuan pada pembelajaran 6, 
+    Menguraikan dokumentasi akhir. Ukurlah kemampuan pemahaman terhadap penyajian materi pengetahuan pada pembelajaran enam, 
     dengan mengisi tabel kuisioner berikut ini.
   </p>
 
@@ -77,15 +77,21 @@
     <tbody>
       <tr>
         <td>1</td>
-        <td>Saya dapat melakukan dokumentasi akhir pemangkasan dan penataan rambut</td>
+        <td>Saya dapat menerapkan dokumentasi hasil akhir pemangkasan rambut dan penataan</td>
         <td><input type="checkbox" id="r6-q1-yes"></td>
         <td><input type="checkbox" id="r6-q1-no"></td>
       </tr>
       <tr>
         <td>2</td>
-        <td>Saya dapat membuat portofolio dalam bentuk digital</td>
+        <td>Saya dapat membuat portofolio digital yang profesional</td>
         <td><input type="checkbox" id="r6-q2-yes"></td>
         <td><input type="checkbox" id="r6-q2-no"></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Saya dapat membangun personal branding di media sosial (Instagram & TikTok)</td>
+        <td><input type="checkbox" id="r6-q3-yes"></td>
+        <td><input type="checkbox" id="r6-q3-no"></td>
       </tr>
     </tbody>
   </table>
@@ -94,8 +100,12 @@
   <button onclick="exportToDoc()">Download ke Word</button>
 
   <script>
-    // id unik untuk Refleksi 6 agar tidak menimpa storage lainnya
-    const ids = ['r6-q1-yes','r6-q1-no','r6-q2-yes','r6-q2-no'];
+    // id unik untuk Refleksi 6
+    const ids = [
+      'r6-q1-yes','r6-q1-no',
+      'r6-q2-yes','r6-q2-no',
+      'r6-q3-yes','r6-q3-no'
+    ];
 
     window.onload = () => {
       ids.forEach(id => {
@@ -124,15 +134,21 @@
           <tr><th>Ya</th><th>Tidak</th></tr>
           <tr>
             <td>1</td>
-            <td>Saya dapat melakukan dokumentasi akhir pemangkasan dan penataan rambut</td>
+            <td>Saya dapat menerapkan dokumentasi hasil akhir pemangkasan rambut dan penataan</td>
             <td>${document.getElementById('r6-q1-yes').checked ? '✓' : ''}</td>
             <td>${document.getElementById('r6-q1-no').checked ? '✓' : ''}</td>
           </tr>
           <tr>
             <td>2</td>
-            <td>Saya dapat membuat portofolio dalam bentuk digital</td>
+            <td>Saya dapat membuat portofolio digital yang profesional</td>
             <td>${document.getElementById('r6-q2-yes').checked ? '✓' : ''}</td>
             <td>${document.getElementById('r6-q2-no').checked ? '✓' : ''}</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Saya dapat membangun personal branding di media sosial (Instagram & TikTok)</td>
+            <td>${document.getElementById('r6-q3-yes').checked ? '✓' : ''}</td>
+            <td>${document.getElementById('r6-q3-no').checked ? '✓' : ''}</td>
           </tr>
         </table></body></html>`;
 
